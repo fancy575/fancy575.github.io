@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xi Fang</title>
+  <meta name="description" content="Xi Fang — Postdoctoral Associate at Yale School of Public Health, Ph.D in Biostatistics" />
+  <link rel="stylesheet" href="assets/css/style.css?v=17" />
+
+</head>
+
+<body>
+  <!-- Top navigation -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Xi Fang</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#publications">Publications</a>
+        <a href="#software">Software</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="background-image:url('assets/img/banner.png')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <img class="avatar" src="assets/img/me.png" alt="Portrait of Xi Fang" />
+      <h1>Xi Fang</h1>
+      <p class="subtitle">Postdoctoral Associate, Yale University</p>
+      <p class="tagline">
+        Causal inference • Composite endpoints • Cluster-randomized & stepped-wedge designs • Survival analysis
+      </p>
+
+      <div class="hero-links">
+        <a class="btn primary" href="#publications">View Publications</a>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+
+      <div class="social">
+        <a href="mailto:x.fang@yale.edu">x.fang@yale.edu</a>
+        <span class="dot">•</span>
+        <a href="https://github.com/fancy575" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot">•</span>
+        <a href="#" target="https://scholar.google.com/citations?user=wMIh9W4AAAAJ&hl=en" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="container main">
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I am a Postdoctoral Associate at Yale University, advised by Fan Li. My research focuses on developing causal inference and survival analysis methods for modern biomedical studies, with particular emphasis on composite endpoints and cluster-randomized and stepped-wedge designs. I am also interested in principled approaches for borrowing historical information and in integrating machine learning tools into study design and analysis. I earned my Ph.D. in Biostatistics from Medical College of Wisconsin.
+      </p>
+    </section>
+
+    <section id="publications" class="section">
+      <h2>Selected Publications</h2>
+      <ol class="pubs">
+        <li>
+          <strong>While-alive regression analysis of composite survival endpoints</strong>.
+          <em>Biostatistics</em>, 2026.
+        </li>
+        <li>
+          <strong>Efficient estimation for left-truncated competing risks regression for case-cohort studies</strong>.
+          <em>Biometrics</em>, 2024.
+        </li>
+        <li>
+          <strong>The Cox model with adaptive fused group bridge penalty to incorporate historical data into the analysis of clinical trials</strong>.
+          <em>Statistics in Medicine</em>, 2025.
+        </li>
+        <li>
+          <strong>A commensurate prior model with random effects for survival and competing risk outcomes to accommodate historical controls</strong>.
+          <em>Pharmaceutical Statistics</em>, 2025.
+        </li>
+        <li>
+          <strong>Commensurate prior models with random effects for interval-censored data to accommodate historical controls</strong>.
+          <em>Communications in Statistics—Simulation and Computation</em>, 2025.
+        </li>
+      </ol>
+    </section>
+
+    <section id="software" class="section">
+      <h2>Software</h2>
+      <ul class="bullets">
+        <li><a href="https://cran.r-project.org/package=MRStdCRT" target="_blank" rel="noopener">MRStdCRT (R package on CRAN)</a></li>
+        <li><a href="https://cran.r-project.org/package=DRsurvCRT" target="_blank" rel="noopener">DRsurvCRT (R package on CRAN)</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <div class="label">Email</div>
+          <div><a href="mailto:x.fang@yale.edu">x.fang@yale.edu</a></div>
+        </div>
+        <div>
+          <div class="label">Affiliation</div>
+          <div>Yale University</div>
+        </div>
+        <div>
+          <div class="label">Links</div>
+          <div>
+            <a href="https://github.com/fancy575" target="_blank" rel="noopener">GitHub</a>
+            <span class="dot">•</span>
+            <a href="#" target="_blank" rel="noopener">Google Scholar</a>
+            <span class="dot">•</span>
+            <a href="#" target="_blank" rel="noopener">ORCID</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span id="year"></span> Xi Fang</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

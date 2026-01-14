@@ -1,0 +1,131 @@
+:root{
+  --bg:#0b1220;
+  --card:#0f1a30;
+  --text:#e8eefc;
+  --muted:#b8c4e6;
+  --link:#d7e3ff;
+  --accent:#ffffff;
+  --shadow: 0 12px 32px rgba(0,0,0,.28);
+  --radius: 18px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:#070b14; }
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+.container{ width:min(1040px, calc(100% - 40px)); margin:0 auto; }
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background: rgba(6,10,20,.72);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.topbar-inner{ display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+.brand{ font-weight:700; letter-spacing:.2px; }
+.nav{ display:flex; gap:14px; flex-wrap:wrap; }
+.nav a{ font-size:14px; opacity:.92; padding:6px 8px; border-radius:10px; }
+.nav a:hover{ background: rgba(255,255,255,.08); text-decoration:none; }
+
+/* SHRUNK HERO (≈ 1/3 banner height) */
+.hero{
+  position:relative;
+  min-height: 95px;            /* ~1/3 of 280px */
+  display:flex;
+  align-items:center;
+  background-size:cover;
+  background-position:center;
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(6,10,20,.35), rgba(6,10,20,.90));
+}
+.hero-inner{
+  position:relative;
+  text-align:center;
+  padding: 10px 0 10px;        /* compact */
+}
+
+/* SHRUNK AVATAR (≈ 1/10 of ~132px) */
+.avatar{
+  width: 13px; height: 13px;
+  border-radius:50%;
+  object-fit:cover;
+  border: 1px solid rgba(255,255,255,.85);
+  box-shadow: none;            /* remove heavy shadow for tiny avatar */
+  margin-bottom: 6px;
+}
+
+.hero h1{
+  margin: 2px 0 2px;
+  font-size: 18px;
+  letter-spacing: .2px;
+}
+.subtitle{
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.tagline{
+  margin: 6px auto 6px;
+  max-width: 760px;
+  color: var(--text);
+  opacity:.95;
+  font-size: 12px;
+}
+
+.social{ margin-top: 6px; font-size: 12px; color: var(--muted); }
+.social a{ color: var(--link); }
+.dot{ margin: 0 8px; opacity:.7; }
+
+/* Reduce overlap since hero is tiny */
+.main{ margin-top: -10px; }
+
+.section{
+  background: rgba(15,26,48,.55);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  margin: 18px 0;
+}
+.section h2{ margin:0 0 12px; font-size: 22px; }
+.small{ font-size: 14px; color: var(--muted); }
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.card{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+.card h3{ margin:0 0 8px; font-size: 16px; }
+.card p{ margin:0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+.pubs{ padding-left: 18px; margin: 8px 0 0; }
+.pubs li{ margin: 10px 0; color: var(--text); }
+.pubs em{ color: var(--muted); }
+.bullets{ margin: 0; padding-left: 18px; color: var(--muted); }
+
+.contact-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.label{ font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+
+.footer{
+  padding: 28px 0;
+  color: var(--muted);
+  text-align:center;
+  opacity:.9;
+}
+
+@media (max-width: 860px){
+  .cards{ grid-template-columns: 1fr; }
+  .contact-grid{ grid-template-columns: 1fr; }
+}
