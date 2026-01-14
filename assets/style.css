@@ -27,56 +27,46 @@ a:hover{ text-decoration:underline; }
 .nav a{ font-size:14px; opacity:.92; padding:6px 8px; border-radius:10px; }
 .nav a:hover{ background: rgba(255,255,255,.08); text-decoration:none; }
 
-/* SHRUNK HERO (≈ 1/3 banner height) */
+/* ====== HERO: shrink to ~10% ====== */
 .hero{
   position:relative;
-  min-height: 95px;            /* ~1/3 of 280px */
+  min-height: 55px;              /* ~10% of 420–600px style heroes */
   display:flex;
   align-items:center;
   background-size:cover;
   background-position:center;
 }
-.hero-overlay{
-  position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(6,10,20,.35), rgba(6,10,20,.90));
-}
+
 .hero-inner{
   position:relative;
   text-align:center;
-  padding: 10px 0 10px;        /* compact */
+  padding: 6px 0 6px;            /* very compact */
 }
 
-/* SHRUNK AVATAR (≈ 1/10 of ~132px) */
+/* Avatar ~10% of a typical 120–140px avatar */
 .avatar{
-  width: 13px; height: 13px;
+  width: 14px;
+  height: 14px;
   border-radius:50%;
   object-fit:cover;
   border: 1px solid rgba(255,255,255,.85);
-  box-shadow: none;            /* remove heavy shadow for tiny avatar */
-  margin-bottom: 6px;
+  box-shadow: none;
+  margin-bottom: 2px;
 }
 
+/* Shrink text to fit tiny hero */
 .hero h1{
-  margin: 2px 0 2px;
-  font-size: 18px;
+  margin: 0;
+  font-size: 14px;
   letter-spacing: .2px;
 }
-.subtitle{
-  margin: 0;
-  font-size: 12px;
-  color: var(--muted);
-}
-.tagline{
-  margin: 6px auto 6px;
-  max-width: 760px;
-  color: var(--text);
-  opacity:.95;
-  font-size: 12px;
-}
 
-.social{ margin-top: 6px; font-size: 12px; color: var(--muted); }
-.social a{ color: var(--link); }
-.dot{ margin: 0 8px; opacity:.7; }
+/* Hide extra hero text so it doesn't force height */
+.subtitle{ display:none; }
+.tagline{ display:none; }
+.hero-links{ display:none; }
+.social{ display:none; }
+
 
 /* Reduce overlap since hero is tiny */
 .main{ margin-top: -10px; }
